@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Poppins:wght@100;300;400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    font-family: 'Poppins'
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    padding: 30px 50px;
+    width: 100%;
+    height: 100px;
+    /* From https://css.glass */
+background: rgba(0, 0, 0, 0.3);
+border-radius: 0 0 16px 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5.8px);
+-webkit-backdrop-filter: blur(5.8px);
+border: 1px solid rgba(0, 0, 0, 0.09);
+}
+
+#header img{
+    width: 90px;
+    border-radius: 10px;
+}
+#header ul{
+    display: flex;
+    gap: 40px;
+}
+#header ul a{
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s;
+}
+#header ul a:hover{
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 15px rgb(255, 255, 255);
+}
+
+
+/* Karsilama alani */
+
+.welcome-sec{
+    background-image: url(images/Arkaplan\ 1\ benzin.jpg);
+    /* ekranin yuksekligini ayarlar*/
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-sec .text{
+    color: white;
+    text-align: center;
+}
+
+
+.text h1{
+    padding-top: 100px;
+    font-family: 'cinzel';
+    font-size: 60px;
+}
+
+.text p{
+    font-size: 24px;
+    max-width: 700px;
+    margin-top: 60px;
+
+}
+
+
+
+/* ikinci alan paspas */
+
+#about{
+    min-height: 100vh;
+    background: rgb(21, 21, 21);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding: 50px;
+}
+
+#about img{
+    max-width: 600px;
+    max-height: 600px;
+}
+
+#about .about-text{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    gap: 30px;
+}
+
+#about .about-text h1{
+    font-size: 50px;
+    font-family: 'Cinzel';
+}
+
+.about-text p{
+   font-size: 18px;
+}
+
+#req-sec{
+    /* resme golge verme */
+    background-color: black;
+    background-image: radial-gradient(
+        circle,
+        rgba(0, 0, 0, 0.287) 0,
+        black 80%
+      ),
+      url(/images/Arkaplan\ 3\ hizmet.png);
+    color: white;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.head{
+    text-align: center;
+}
+
+.head h5{
+    font-size: 24px;
+}
+.head h1{
+    font-size: 60px;
+}
+
+
+
+
+.boxes{
+    width: 700px;
+    height: 500px;
+    margin: 100px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box{
+    width: 50%;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid;
+}
+
+.box h1{
+    color: white;
+    font-size: 20px;
+    font-family: 'cinzel';
+}
+
+.boxes .box:last-child{
+    width: 100%;
+}
+
+/* 1400px in altinda gecerli olacak stiller (Mobilde duzgun gozukmesini saglamak) */
+
+@media (max-width: 1250px) {
+    #about{
+        flex-direction: column;
+    }
+
+    #welcome-sec{
+        padding: 50px;
+    }
+    .text h1{
+        font-size: 40px;
+    }
+    .text p{
+        font-size: 20px;
+    }
+     #header img{
+        width: 50px;
+     }
+     #header{
+        padding: 20px;
+     }
+
+     #rec-sec .head h5{
+        font-size: 20px;
+     }
+     #rec-sec .head h1{
+        font-size: 50px;
+     }
+     .boxes{
+        width: 100%;
+        height: unset;
+     }
+    .boxes .box {
+        width: 100%;
+     }
+} 
